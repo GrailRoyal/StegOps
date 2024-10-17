@@ -1,1 +1,44 @@
+# # Setting Up a LAMP Stack on an EC2 Instance (Ubuntu Server)
+
+Setting up a LAMP stack (Linux, Apache, MySQL, PHP) on an Amazon EC2 instance using Ubuntu Server 22.04 LTS. This setup is ideal for developing and hosting dynamic web applications.
+
+## Components of a LAMP Stack
+- **Linux**: The operating system (Ubuntu Server 22.04 LTS).
+- **Apache**: The web server that hosts web pages.
+- **MySQL**: The database server for managing relational databases.
+- **PHP**: The server-side scripting language for web development.
+
+---
+
+## Launching an EC2 Instance
+
+1. **Sign in** to the AWS Management Console.
+2. Navigate to the **EC2 Dashboard** and select "Launch Instance."
+3. Choose **Ubuntu Server 22.04 LTS** as your operating system.
+4. Configure your instance details, including instance type, network, subnet, and security group.
+5. Allocate storage based on your requirements.
+6. Set up a **Security Group** with inbound traffic rules:
+   - Port 22 (SSH)
+   - Port 80 (HTTP)
+   - Port 443 (HTTPS)
+
+---
+
+## Connecting to the EC2 Instance
+
+Once your instance is running, connect via SSH with the following command:
+
+```bash
+ssh -i key.pem ubuntu@<mypublicip>
+ 
+## installing the LAMP stack
+**Update the package repository**
+sudo apt update
+**Install Apache**
+sudo apt install apache2
+**Check Apache2 status**
+sudo systemctl status apache2
+## Test Apache2 on server
+http://mypublicip
+
 
