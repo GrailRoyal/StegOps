@@ -28,18 +28,27 @@ Setting up a LAMP stack (Linux, Apache, MySQL, PHP) on an Amazon EC2 instance us
 
 Once your instance is running, connect via SSH with the following command:
 
-
+```bash
 ssh -i key.pem ubuntu@<mypublicip>
+```
  
 ## installing the LAMP stack
 **Update the package repository**
+```bash
 sudo apt update
+```
 **Install Apache**
+```bash
 sudo apt install apache2
+```
 **Check Apache2 status**
+```bash
 sudo systemctl status apache2
+```
 ## Test Apache2 on server
+```bash
 http://mypublicip
+```
 ![Apache2 Testing](https://github.com/GrailRoyal/StegOps/blob/ed6b0c291df66c2c80e7b20a9e6fb8688fa590dd/Apache2%20Testing.png)
 
 ## installing muSQL and security
